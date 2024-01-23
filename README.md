@@ -3,7 +3,7 @@
 This repository contains the code for a TurtleBot3 service robot designed to enforce house rules during a party. The robot navigates within specific rooms (A, B, and D) to ensure rule compliance. The rules include restrictions on kitchen access and the simultaneous presence of the cat and dog in a room.
 
 ## Preview
-Preview - https://www.youtube.com/watch?v=fJBNdK0D03M
+https://www.youtube.com/watch?v=fJBNdK0D03M
 
 ## House Rules
 
