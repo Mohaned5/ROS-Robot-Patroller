@@ -2,6 +2,9 @@
 
 This repository contains the code for a TurtleBot3 service robot designed to enforce house rules during a party. The robot navigates within specific rooms (A, B, and D) to ensure rule compliance. The rules include restrictions on kitchen access and the simultaneous presence of the cat and dog in a room.
 
+## Preview
+Preview - https://www.youtube.com/watch?v=fJBNdK0D03M
+
 ## House Rules
 
   No people in the kitchen (room D) at any time.
@@ -33,8 +36,26 @@ The YOLO (You Only Look Once) algorithm is integrated into the state machine to 
 ## Main Node
 
 The main node initiates the robot's behavior, calling the service to patrol a room and executing the actionlib server to enforce house rules. It prints the number of rule violations in the terminal.
-Launch File
+
+## Launch File and Usage
 
 A launch file, named "itr_cw.launch," is provided to start all necessary nodes for testing. It includes arguments for the number of checks and the video player node's video folder path.
+
+Place the folder into your ROS Workspace.
+1. Launch the empty stage plan:
+
+       roslaunch rosplan_stage_demo empty_stage_single_robot.launch
+
+2. Run RViZ view of stage demo (put your correct path):
+
+       rosrun rviz rviz -d /opt/itr_ws/src/rosplan_stage_demo/config/rosplan_stage_demo.rviz
+
+3. Launch the launch file (any number of checks):
+
+       roslaunch second_coursework itr_cw.launch nchecks:=1
+
+4. Run image view to see camera:
+
+       rosrun rqt_image_view rqt_image_view
 
 Feel free to explore, integrate, and enhance this repository for your robotic applications.
